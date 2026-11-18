@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — Sima Kogan</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try {
+        var t = localStorage.getItem('sk-theme');
+        if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        d.setAttribute('data-theme', t);
+        var l = localStorage.getItem('sk-lang');
+        if (l === 'ru' || l === 'he') { d.lang = l; d.dir = l === 'he' ? 'rtl' : 'ltr'; }
+      } catch (e) { d.setAttribute('data-theme', 'dark'); }
+    })();
+  </script>
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <main class="nf">
+    <div>
+      <h1 class="grad">404</h1>
+      <h2 data-i18n="404.t">Page not found</h2>
+      <p data-i18n="404.d">This page drifted out of the embedding space.</p>
+      <a class="btn btn--primary" href="/" data-i18n="404.b">Back home</a>
+    </div>
+  </main>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/common.js"></script>
+</body>
+</html>
